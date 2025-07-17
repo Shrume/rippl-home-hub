@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { MobileHeader } from "@/components/MobileHeader";
+import { DailyActionCard } from "@/components/DailyActionCard";
+import { RipplsList } from "@/components/RipplsList";
+import { BottomTabBar } from "@/components/BottomTabBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background flex flex-col max-w-md mx-auto">
+      {/* Header */}
+      <MobileHeader />
+      
+      {/* Main Content */}
+      <main className="flex-1 pt-6">
+        {/* Daily Action Card */}
+        <DailyActionCard />
+        
+        {/* Rippls List */}
+        <RipplsList />
+      </main>
+      
+      {/* Bottom Navigation */}
+      <BottomTabBar />
     </div>
   );
 };
