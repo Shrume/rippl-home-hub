@@ -26,7 +26,7 @@ export const DailyActionCard = ({ onStartAction }: DailyActionCardProps) => {
       </Badge>
 
       {/* Content */}
-      <div className="space-y-3">
+      <div className="space-y-3 mb-14">
         <h2 className="text-xl font-bold leading-tight">
           Plant a tree in your neighborhood
         </h2>
@@ -39,7 +39,7 @@ export const DailyActionCard = ({ onStartAction }: DailyActionCardProps) => {
       {/* Start button */}
       <Button 
         onClick={onStartAction}
-        className="absolute bottom-4 right-4 bg-white text-primary hover:bg-white/90 font-medium"
+        className="absolute bottom-6 right-4 bg-white text-primary hover:bg-white/90 font-medium"
         size="sm"
       >
         Start now
