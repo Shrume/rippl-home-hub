@@ -2,7 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export const DailyActionCard = () => {
+interface DailyActionCardProps {
+  onStartAction: () => void;
+}
+
+export const DailyActionCard = ({ onStartAction }: DailyActionCardProps) => {
   return (
     <div className="relative bg-gradient-teal-blue rounded-2xl p-6 text-white shadow-glow mx-4 mb-6">
       {/* Points badge */}
@@ -34,6 +38,7 @@ export const DailyActionCard = () => {
 
       {/* Start button */}
       <Button 
+        onClick={onStartAction}
         className="absolute bottom-4 right-4 bg-white text-primary hover:bg-white/90 font-medium"
         size="sm"
       >
