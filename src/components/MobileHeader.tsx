@@ -1,8 +1,12 @@
 import { Bell, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import ripplLogo from "@/assets/rippl-logo.png";
+import { useState } from "react";
+import { LeaderboardPopup } from "./LeaderboardPopup";
 
 export const MobileHeader = () => {
+  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  
   return (
     <header className="flex items-center justify-between p-4 bg-background border-b border-border">
       {/* RIPPL Logo */}
@@ -21,7 +25,10 @@ export const MobileHeader = () => {
         </div>
         
         {/* Trophy */}
-        <Trophy className="w-5 h-5 text-warning" />
+        <Trophy 
+          className="w-5 h-5 text-warning hover:scale-110 transition-transform cursor-pointer"
+          onClick={() => setShowLeaderboard(true)}
+        />
         
         {/* Notifications */}
         <div className="relative">
@@ -29,6 +36,12 @@ export const MobileHeader = () => {
           <div className="absolute -top-1 -right-1 w-2 h-2 bg-warning rounded-full"></div>
         </div>
       </div>
+      
+      {/* Leaderboard Popup */}
+      <LeaderboardPopup 
+        open={showLeaderboard} 
+        onOpenChange={setShowLeaderboard} 
+      />
     </header>
   );
 };
