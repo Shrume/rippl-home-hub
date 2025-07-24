@@ -1,4 +1,4 @@
-import { Bell, Trophy } from "lucide-react";
+import { LogOut, Trophy, Flame } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import ripplLogo from "@/assets/rippl-logo.png";
 import { useState } from "react";
@@ -18,6 +18,12 @@ export const MobileHeader = () => {
 
       {/* Right side icons */}
       <div className="flex items-center gap-3">
+        {/* Streak Counter */}
+        <div className="flex items-center bg-warning/10 rounded-full px-3 py-1.5 gap-2">
+          <Flame className="w-4 h-4 text-warning" />
+          <span className="text-sm font-medium text-warning">12</span>
+        </div>
+        
         {/* Points pill */}
         <div className="flex items-center bg-primary/10 rounded-full px-3 py-1.5 gap-2">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -30,11 +36,14 @@ export const MobileHeader = () => {
           onClick={() => setShowLeaderboard(true)}
         />
         
-        {/* Notifications */}
-        <div className="relative">
-          <Bell className="w-5 h-5 text-muted-foreground" />
-          <div className="absolute -top-1 -right-1 w-2 h-2 bg-warning rounded-full"></div>
-        </div>
+        {/* Logout */}
+        <LogOut 
+          className="w-5 h-5 text-muted-foreground hover:text-destructive transition-colors cursor-pointer"
+          onClick={() => {
+            localStorage.removeItem("isAuthenticated");
+            window.location.reload();
+          }}
+        />
       </div>
       
       {/* Leaderboard Popup */}
