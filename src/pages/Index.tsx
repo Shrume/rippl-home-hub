@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { MobileHeader } from "@/components/MobileHeader";
 import { DailyActionCard } from "@/components/DailyActionCard";
 import { RipplsList } from "@/components/RipplsList";
-import { LeaderboardSection } from "@/components/LeaderboardSection";
 
 import { DoRipplScreen } from "@/components/DoRipplScreen";
 import { ImpactScreen } from "@/components/ImpactScreen";
@@ -62,9 +61,6 @@ const Index = () => {
       <main className="flex-1 pt-6">
         {/* Daily Action Card */}
         <DailyActionCard onStartAction={handleStartAction} />
-        
-        {/* Leaderboard Section */}
-        <LeaderboardSection />
         
         {/* Rippls List */}
         <RipplsList />
