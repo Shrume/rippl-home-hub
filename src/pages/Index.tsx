@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MobileHeader } from "@/components/MobileHeader";
 import { DailyActionCard } from "@/components/DailyActionCard";
 import { RipplsList } from "@/components/RipplsList";
-import { BottomTabBar } from "@/components/BottomTabBar";
+
 import { DoRipplScreen } from "@/components/DoRipplScreen";
 import { ImpactScreen } from "@/components/ImpactScreen";
 
@@ -57,8 +57,6 @@ const Index = () => {
         <RipplsList />
       </main>
       
-      {/* Bottom Navigation */}
-      <BottomTabBar />
     </div>
   );
 };
