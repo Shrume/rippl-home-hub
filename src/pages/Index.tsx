@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { MobileHeader } from "@/components/MobileHeader";
 import { DailyActionCard } from "@/components/DailyActionCard";
 import { RipplsList } from "@/components/RipplsList";
@@ -10,6 +11,14 @@ type ScreenType = "home" | "do-rippl" | "impact";
 
 const Index = () => {
   const [currentScreen, setCurrentScreen] = useState<ScreenType>("home");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    if (!isAuthenticated) {
+      navigate("/signin");
+    }
+  }, [navigate]);
 
   const handleStartAction = () => {
     setCurrentScreen("do-rippl");
