@@ -12,21 +12,21 @@ export const WorldMap = () => {
           <path d="M280 70 L350 65 L360 95 L340 140 L300 135 Z" fill="currentColor" className="text-muted-foreground/40" />
         </svg>
         
-        {/* Impact dots */}
+        {/* Impact dots with pulsing animation */}
         <div className="absolute inset-0">
-          {/* Various sized dots representing impact locations */}
-          <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary rounded-full opacity-80"></div>
-          <div className="absolute top-1/3 left-1/6 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-          <div className="absolute top-2/5 left-1/3 w-4 h-4 bg-primary rounded-full opacity-90"></div>
-          <div className="absolute top-1/2 left-2/5 w-2 h-2 bg-primary rounded-full opacity-70"></div>
-          <div className="absolute top-3/5 left-1/5 w-3 h-3 bg-primary rounded-full opacity-80"></div>
+          {/* Various sized dots representing impact locations with pulse animation */}
+          <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary rounded-full opacity-80 animate-pulse"></div>
+          <div className="absolute top-1/3 left-1/6 w-2 h-2 bg-primary rounded-full opacity-60 animate-pulse [animation-delay:0.5s]"></div>
+          <div className="absolute top-2/5 left-1/3 w-4 h-4 bg-primary rounded-full opacity-90 animate-pulse [animation-delay:1s]"></div>
+          <div className="absolute top-1/2 left-2/5 w-2 h-2 bg-primary rounded-full opacity-70 animate-pulse [animation-delay:1.5s]"></div>
+          <div className="absolute top-3/5 left-1/5 w-3 h-3 bg-primary rounded-full opacity-80 animate-pulse [animation-delay:2s]"></div>
           
-          <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-          <div className="absolute top-2/5 right-1/4 w-3 h-3 bg-primary rounded-full opacity-80"></div>
-          <div className="absolute top-1/2 right-2/5 w-2 h-2 bg-primary rounded-full opacity-70"></div>
+          <div className="absolute top-1/4 right-1/3 w-2 h-2 bg-primary rounded-full opacity-60 animate-pulse [animation-delay:0.8s]"></div>
+          <div className="absolute top-2/5 right-1/4 w-3 h-3 bg-primary rounded-full opacity-80 animate-pulse [animation-delay:1.3s]"></div>
+          <div className="absolute top-1/2 right-2/5 w-2 h-2 bg-primary rounded-full opacity-70 animate-pulse [animation-delay:1.8s]"></div>
           
-          <div className="absolute top-1/3 right-1/5 w-2 h-2 bg-primary rounded-full opacity-60"></div>
-          <div className="absolute top-3/5 right-1/6 w-3 h-3 bg-primary rounded-full opacity-80"></div>
+          <div className="absolute top-1/3 right-1/5 w-2 h-2 bg-primary rounded-full opacity-60 animate-pulse [animation-delay:2.3s]"></div>
+          <div className="absolute top-3/5 right-1/6 w-3 h-3 bg-primary rounded-full opacity-80 animate-pulse [animation-delay:0.3s]"></div>
         </div>
       </div>
       
