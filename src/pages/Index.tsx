@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { MobileHeader } from "@/components/MobileHeader";
 import { DailyActionCard } from "@/components/DailyActionCard";
-import { RipplsList } from "@/components/RipplsList";
 import { WaveSection } from "@/components/WaveSection";
 import { BottomTabBar } from "@/components/BottomTabBar";
 
@@ -70,8 +69,6 @@ const Index = () => {
           <DailyActionCard onStartAction={handleStartAction} />
         </div>
         
-        {/* Rippls List */}
-        <RipplsList />
       </main>
       
       {/* Bottom Navigation */}
